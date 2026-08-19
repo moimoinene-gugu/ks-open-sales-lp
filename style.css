@@ -16,8 +16,11 @@ a {
 }
 
 .site-header {
-  width: 100%;
-  background: #ffffff;
+    width: 100%;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-container {
@@ -1443,9 +1446,9 @@ a {
     font-size: 34px;
   }
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 768px) {s
     .back-to-top {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 }
