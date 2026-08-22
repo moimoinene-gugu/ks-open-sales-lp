@@ -42,7 +42,36 @@ a {
   font-size: 18px;
   font-weight: 600;
 }
+.logo-image {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+/* Language switcher */
+.nav-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.language-switcher {
+  margin-top: 8px;
+  margin-left: 12px;
+  font-size: 14px;
+  line-height: 1;
+}
 
+.language-switcher a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.language-switcher a:hover {
+  opacity: 0.65;
+}
+
+.language-switcher .active {
+  font-weight: 600;
+}
 .nav-links {
   display: flex;
   align-items: center;
@@ -802,7 +831,36 @@ a {
 .offer-terms p:last-child {
   margin-bottom: 0;
 }
+/* Offer Trust */
 
+.offer-trust {
+  margin-top: 28px;
+  margin-bottom: 28px;
+  padding: 20px 22px;
+
+  background: #f7f7fb;
+  border-radius: 12px;
+}
+
+.offer-trust-title {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.offer-trust p:not(.offer-trust-title) {
+  margin: 0 0 10px;
+
+  font-size: 13px;
+  line-height: 1.65;
+  color: #5f5f67;
+}
+
+.offer-trust p:last-child {
+  margin-bottom: 0;
+}
 /* =========================
    CTA
    ========================= */
@@ -859,6 +917,46 @@ a {
   font-size: 13px;
   font-weight: 600;
 }
+.cta-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.cta-line-link {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555555;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.cta-line-link:hover {
+  opacity: 0.65;
+}
+.cta-line-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555555;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.cta-line-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.cta-line-link:hover {
+  opacity: 0.65;
+}
 /* =========================
    Footer
    ========================= */
@@ -886,7 +984,7 @@ a {
   justify-content: space-between;
   gap: 48px;
 
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 
 .footer-brand h3 {
@@ -897,7 +995,7 @@ a {
 }
 
 .footer-brand p {
-  max-width: 280px;
+  max-width: 360px;
 
   font-size: 12px;
   line-height: 1.6;
@@ -915,6 +1013,109 @@ a {
 .footer-copy {
   font-size: 11px;
   color: #999999;
+}
+.footer-logo-image {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+
+.footer-logo-link {
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.footer-social-icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.footer-social-link:hover {
+  opacity: 0.65;
+}
+/* =========================
+   Legal Page
+   ========================= */
+
+.legal-page {
+  min-height: 100vh;
+  background: #f7f7f9;
+  padding: 80px 24px;
+}
+
+.legal-container {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 56px 64px;
+
+  background: #ffffff;
+  border: 1px solid #e7e7e7;
+  border-radius: 20px;
+}
+
+.legal-container > h1 {
+  margin-bottom: 16px;
+
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.legal-intro {
+  margin-bottom: 48px;
+
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666666;
+}
+
+.legal-details {
+  border-top: 1px solid #e7e7e7;
+}
+
+.legal-item {
+  padding: 24px 0;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.legal-item h2 {
+  margin-bottom: 8px;
+
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.legal-item p {
+  margin: 0 0 10px;
+
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555555;
+}
+
+.legal-item p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-container .back-to-top {
+  display: inline-block;
+  margin-top: 40px;
 }
 /* =========================
    Thank You Page
@@ -1466,10 +1667,47 @@ a {
   .thank-you-card h1 {
     font-size: 34px;
   }
-/* Mobile */
-@media (max-width: 768px) {s
-    .back-to-top {
-        font-size: 13px;
-    }
+
+  .back-to-top {
+    font-size: 13px;
+  }
+
+} /* ← @media (max-width: 768px) はここで終了 */
+
+
+/* =========================
+   Japanese Typography
+   ========================= */
+
+html[lang="ja"] h1,
+html[lang="ja"] h2,
+html[lang="ja"] h3 {
+  text-wrap: balance;
 }
+
+
+/* =========================
+   Japanese Small Mobile
+   ========================= */
+
+@media (max-width: 480px) {
+
+  html[lang="ja"] .hero h1 {
+    font-size: 30px;
+    line-height: 1.25;
+  }
+
+  html[lang="ja"] h2 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  html[lang="ja"] .offer-price-amount {
+    font-size: 34px;
+  }
+
+  html[lang="ja"] .offer-price-currency {
+    font-size: 14px;
+  }
+
 }
